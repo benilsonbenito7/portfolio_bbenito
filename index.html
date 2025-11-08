@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Benilson Benito</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Efeito simples no botão
+    function mudarTexto(btn) {
+      btn.innerText = "🚀 Obrigado por visitar!";
+      btn.classList.add("scale-105", "bg-teal-600");
+      setTimeout(() => {
+        btn.innerText = "Contactar-me";
+        btn.classList.remove("scale-105", "bg-teal-600");
+      }, 2000);
+    }
+
+    // Fade-in suave na página
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("opacity-0", "transition-opacity", "duration-1000");
+      setTimeout(() => document.body.classList.remove("opacity-0"), 100);
+    });
+  </script>
+</head>
+
+<body class="bg-gray-900 text-gray-100 font-sans flex flex-col min-h-screen">
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-6 py-4 bg-gray-800 shadow-md">
+    <h1 class="text-2xl font-bold text-teal-400">Benilson Benito</h1>
+    <nav class="space-x-6 hidden md:flex">
+      <a href="#sobre" class="hover:text-teal-400">Sobre</a>
+      <a href="#skills" class="hover:text-teal-400">Skills</a>
+      <a href="#contacto" class="hover:text-teal-400">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="sobre" class="flex flex-col justify-center items-center text-center flex-grow px-6 py-16">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">Desenvolvedor em Formação 💻</h2>
+    <p class="text-gray-400 max-w-xl mb-8">
+      Estudante da <span class="text-teal-400 font-semibold">42 Luanda</span>, com bases em
+      <span class="text-teal-300">C</span>, <span class="text-teal-300">C++</span>, 
+      <span class="text-teal-300">HTML</span>, <span class="text-teal-300">CSS</span>, 
+      <span class="text-teal-300">Tailwind CSS</span> e <span class="text-yellow-400 font-semibold">JavaScript</span>.
+    </p>
+    <button onclick="mudarTexto(this)" class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-full text-lg shadow-md transition-all">
+      Contactar-me
+    </button>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="bg-gray-800 py-12">
+    <h3 class="text-3xl text-center font-semibold mb-8">Tecnologias & Ferramentas</h3>
+    <div class="flex flex-wrap justify-center gap-6">
+      <!-- Logo C (mais moderna) -->
+      <img src="https://raw.githubusercontent.com/konpa/devicon/master/icons/c/c-original.svg" width="50" alt="C"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width="50" alt="C++"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50" alt="HTML"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50" alt="CSS"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" width="50" alt="Tailwind"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50" alt="JavaScript"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="50" alt="VSCode"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="50" alt="Git"/>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer id="contacto" class="bg-gray-900 text-center py-6 border-t border-gray-800">
+    <p class="text-gray-500 text-sm">© 2025 Benilson Benito — Desenvolvido com ❤️ e Tailwind CSS</p>
+  </footer>
+</body>
+</html>
